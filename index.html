@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small directory of curious people and the things they’re into.">
+  <meta name="theme-color" content="#f3f4f6">
+  <title>Into Things. — Come see what everyone's into.</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script type="module" src="./assets/app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#people" aria-label="Into Things. — All people">Into Things<span>.</span></a>
+    <span class="site-note">A small directory of curious people</span>
+  </header>
+  <main id="main" tabindex="-1">
+    <p id="loading" role="status">Finding our people…</p>
+    <section id="directory" hidden aria-labelledby="directory-title">
+      <div class="intro"><p class="eyebrow">People, through their interests</p>
+        <h1 id="directory-title">Come see what<br>everyone's into<span class="accent">.</span></h1>
+        <p>A few good rabbit holes. Some people to fall down them with.</p>
+      </div>
+      <form id="search-form" role="search">
+        <label for="search">Find people by interest</label>
+        <div class="search-wrap"><span aria-hidden="true">↗</span><input id="search" type="search" placeholder="Try Lean 4, ceramics, coding agents…" autocomplete="off" aria-describedby="search-hint"></div>
+        <p id="search-hint" class="small">Search the tags. Follow your curiosity.</p>
+      </form>
+      <div class="list-heading"><h2>People</h2><p id="count" role="status" aria-live="polite" aria-atomic="true"></p></div>
+      <ul id="people" class="people-list"></ul>
+      <div id="empty" class="empty" hidden><h2>No shared rabbit holes. Yet.</h2><p>Try another interest, or <button id="clear" type="button">clear the search</button>.</p></div>
+    </section>
+    <section id="profile" hidden aria-labelledby="profile-title"></section>
+    <section id="error" hidden role="alert"><h1>We couldn’t load the people.</h1><p>Check your connection and try reloading. If you’re running this locally, use the preview server described in the README.</p><button id="retry" type="button">Try again</button></section>
+    <noscript><p>This directory needs JavaScript to read its profile file. You can also browse <a href="./data/profiles.json">the profiles as JSON</a>.</p></noscript>
+  </main>
+  <footer><span>Into things. Into people.</span><span>Static prototype · Sample people</span><a href="https://github.com/KuzniAI/static-things#add-yourself">Add yourself via a pull request ↗</a></footer>
+</body>
+</html>
