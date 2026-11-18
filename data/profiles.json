@@ -2,199 +2,30 @@
   "version": 1,
   "profiles": [
     {
-      "id": "martin",
-      "name": "Martin",
-      "bio": "Proofs, pixels, and occasionally touching grass. Usually as a Druid.",
+      "id": "damian",
+      "name": "Damian",
+      "bio": "Programuję w .NETcie już trzecie stulecie",
+      "avatar": "assets/avatars/damian.jpg",
       "interests": [
         {
-          "category": "A language I’m learning",
-          "answer": "Lean 4",
-          "description": "Trying to convince a computer that the obvious thing is actually true. The computer has questions.",
-          "keywords": [
-            "formal verification",
-            "mathematics"
-          ],
-          "links": [
-            {
-              "label": "Lean language",
-              "url": "https://lean-lang.org/"
-            }
-          ]
+          "category": "Coding agent i model?",
+          "answer": "Claude Code + Claude Opus 5.5"
         },
         {
-          "category": "My other life",
-          "answer": "World of Warcraft / Druid",
-          "description": "Restoration when people need me. Feral when they don’t. Still stopping to pick herbs.",
-          "keywords": [
-            "gaming",
-            "WoW"
-          ],
-          "links": [
-            {
-              "label": "World of Warcraft",
-              "url": "https://worldofwarcraft.blizzard.com/"
-            }
-          ]
+          "category": "Ulubiony tani model?",
+          "answer": "GLM 5.3 Flash"
         },
         {
-          "category": "Away from a screen",
-          "answer": "Long walks",
-          "description": "No route optimisation. That would defeat the point.",
-          "keywords": [
-            "walking"
-          ]
+          "category": "Czym się zajmuję w pracy?",
+          "answer": "Buduję software factory w oparciu o wymagania dla klientów w Rouen"
         }
       ],
-      "avatar": "assets/avatars/martin.svg"
-    },
-    {
-      "id": "patch",
-      "name": "patch",
-      "bio": "Making little tools with coding agents. Then making tools to fix those tools.",
-      "interests": [
-        {
-          "category": "Current rabbit hole",
-          "answer": "Coding agents",
-          "description": "Small experiments in getting an agent to finish the boring parts without inventing exciting new problems.",
-          "keywords": [
-            "AI",
-            "developer tools"
-          ]
-        },
-        {
-          "category": "Weekend project",
-          "answer": "Small websites",
-          "description": "HTML still works. This continues to delight me.",
-          "keywords": [
-            "indie web",
-            "vanilla JavaScript"
-          ],
-          "links": [
-            {
-              "label": "The small web",
-              "url": "https://smallweb.page/"
-            }
-          ]
-        },
-        {
-          "category": "On repeat",
-          "answer": "Ambient music",
-          "description": "Music for thinking, or for thinking about thinking.",
-          "keywords": [
-            "music"
-          ]
-        }
-      ],
-      "avatar": "assets/avatars/patch.svg",
       "links": [
         {
-          "label": "My web reference",
-          "url": "https://developer.mozilla.org/en-US/docs/Web"
+          "label": "X",
+          "url": "https://x.com/lazarewiczd"
         }
       ]
-    },
-    {
-      "id": "jules",
-      "name": "Jules",
-      "bio": "Clay under my fingernails. A camera in my bag. Too many unfinished mugs.",
-      "interests": [
-        {
-          "category": "What I make",
-          "answer": "Ceramics",
-          "description": "Hand-built bowls, slightly wonky cups, and a growing respect for people who can centre clay.",
-          "keywords": [
-            "pottery",
-            "craft"
-          ]
-        },
-        {
-          "category": "How I look around",
-          "answer": "Film photography",
-          "description": "One roll, thirty-six chances to notice something. Mostly doors, apparently.",
-          "keywords": [
-            "35mm",
-            "photography"
-          ]
-        },
-        {
-          "category": "An ongoing experiment",
-          "answer": "Sourdough",
-          "description": "The starter is the only thing in this house with a reliable schedule.",
-          "keywords": [
-            "baking"
-          ]
-        }
-      ],
-      "avatar": "assets/avatars/jules.svg"
-    },
-    {
-      "id": "nika",
-      "name": "Nika",
-      "bio": "Reading strange books and finding the long way home by bike.",
-      "interests": [
-        {
-          "category": "On my nightstand",
-          "answer": "Science fiction",
-          "description": "Stories about possible futures and the very familiar people who inhabit them.",
-          "keywords": [
-            "books",
-            "reading"
-          ]
-        },
-        {
-          "category": "My preferred speed",
-          "answer": "Bikepacking",
-          "description": "A tent, a questionable weather forecast, and a road I haven’t taken yet.",
-          "keywords": [
-            "cycling",
-            "outdoors"
-          ]
-        },
-        {
-          "category": "A tiny obsession",
-          "answer": "Maps",
-          "description": "Old city plans, contour lines, and places with excellent names.",
-          "keywords": [
-            "cartography"
-          ]
-        }
-      ],
-      "avatar": "assets/avatars/nika.svg"
-    },
-    {
-      "id": "sol",
-      "name": "Sol",
-      "bio": "Listening closely. To birds, mostly. Sometimes to synthesisers.",
-      "interests": [
-        {
-          "category": "Before breakfast",
-          "answer": "Birdwatching",
-          "description": "Learning the neighbourhood by sound. The blackbirds have a lot to say.",
-          "keywords": [
-            "nature",
-            "birds"
-          ]
-        },
-        {
-          "category": "After dark",
-          "answer": "Modular synthesis",
-          "description": "Connecting cables until something sounds like a very confused satellite.",
-          "keywords": [
-            "music",
-            "synthesisers"
-          ]
-        },
-        {
-          "category": "What’s growing",
-          "answer": "Balcony gardening",
-          "description": "A small patch of green, an unreasonable number of tomatoes.",
-          "keywords": [
-            "plants",
-            "gardening"
-          ]
-        }
-      ],
-      "avatar": "assets/avatars/sol.svg"
     }
   ]
 }

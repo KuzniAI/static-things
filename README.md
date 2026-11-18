@@ -2,7 +2,7 @@
 
 **Come see what everyone's into.** A small directory of people, told through their interests.
 
-This is a working static prototype: HTML, CSS, vanilla JavaScript, and a JSON file. No accounts, backend, package installation, or build step. The five initial people are **illustrative sample profiles**, not verified personal statements. Replace or edit them before inviting real contributions.
+This is a working static prototype: HTML, CSS, vanilla JavaScript, and a JSON file. No accounts, backend, package installation, or build step. The directory currently features Damian.
 
 ## Preview locally
 
@@ -45,7 +45,7 @@ See [GitHub’s publishing-source documentation](https://docs.github.com/en/page
 - `assets/style.css` — flat responsive design, system light/dark themes, reduced motion support.
 - `assets/app.mjs` — rendering, navigation, query and scroll restoration.
 - `assets/content.mjs` — shared content validation, tags, and search logic.
-- `assets/avatars/` — bundled original placeholder artwork; no third-party requests.
+- `assets/avatars/` — bundled profile images.
 - `data/profiles.json` — the only content file friends need to edit.
 - `data/profiles.schema.json` — JSON Schema for editor assistance.
 - `scripts/validate.mjs` and `tests/` — optional dependency-free Node checks.

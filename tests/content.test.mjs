@@ -3,11 +3,19 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { validateProfiles, tagsFor, matches, safeLink, safeAvatar } from '../assets/content.mjs';
 const data = JSON.parse(await readFile(new URL('../data/profiles.json', import.meta.url)));
-test('sample content is valid and Martin is discoverable by both hobbies', () => {
+test('the directory contains only Damian', () => {
   assert.deepEqual(validateProfiles(data), []);
-  const martin = data.profiles.find(p => p.id === 'martin');
-  for (const query of ['lean 4', 'DRUID', 'WoW', 'lean druid']) assert.ok(matches(martin, query));
-  assert.ok(!matches(martin, 'ceramics'));
+  assert.deepEqual(data.profiles.map(p => p.id), ['damian']);
+  assert.equal(data.profiles[0].name, 'Damian');
+});
+test('search matches multiple terms across interests and keywords', () => {
+  const profile = {
+    name: 'Example',
+    bio: 'Example profile',
+    interests: [{ answer: 'Lean 4' }, { answer: 'Druid', keywords: ['WoW'] }]
+  };
+  for (const query of ['lean 4', 'DRUID', 'WoW', 'lean druid']) assert.ok(matches(profile, query));
+  assert.ok(!matches(profile, 'ceramics'));
 });
 test('tags preserve author order, trim and deduplicate; search handles accents', () => {
   const p = { interests:[{ answer:'Café', keywords:['  café  ', 'Coffee'] }, { answer:'Coffee' }] };
