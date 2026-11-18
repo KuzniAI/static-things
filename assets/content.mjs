@@ -9,7 +9,7 @@ export function safeAvatar(value) {
   return typeof value === 'string' && /^assets\/avatars\/[a-zA-Z0-9_-]+\.(svg|png|jpe?g|webp)$/.test(value);
 }
 export function tagsFor(profile) {
-  const tags = profile.interests.flatMap(interest => [interest.answer, ...(interest.keywords || [])]);
+  const tags = profile.tags ?? profile.interests.flatMap(interest => [interest.answer, ...(interest.keywords || [])]);
   const unique = new Map();
   for (const tag of tags) {
     const key = tag.trim().toLocaleLowerCase('en');
@@ -43,11 +43,12 @@ export function validateProfiles(data) {
   data.profiles.forEach((p, i) => {
     const path = `profiles[${i}]`;
     if (!p || typeof p !== 'object' || Array.isArray(p)) return issue(path, 'must be an object');
-    known(p, ['id','name','bio','avatar','links','interests'], path);
+    known(p, ['id','name','bio','avatar','tags','links','interests'], path);
     if (!text(p.id) || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p.id) || ids.has(p.id)) issue(`${path}.id`, 'must be a unique lowercase slug');
     ids.add(p.id);
     for (const key of ['name','bio']) if (!text(p[key])) issue(`${path}.${key}`, 'must be nonempty text');
     if (p.avatar !== undefined && !safeAvatar(p.avatar)) issue(`${path}.avatar`, 'must be a local assets/avatars/ image path');
+    if (p.tags !== undefined && (!Array.isArray(p.tags) || !p.tags.every(text))) issue(`${path}.tags`, 'must be an array of nonempty strings');
     links(p.links, `${path}.links`);
     if (!Array.isArray(p.interests) || !p.interests.length) return issue(`${path}.interests`, 'needs at least one interest');
     p.interests.forEach((interest, j) => {

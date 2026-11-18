@@ -41,6 +41,7 @@ Here is a complete profile object (replace the example identity and URL with you
 | `links` | No | Array of personal `{ "label": "…", "url": "https://…" }` links. |
 | `interests` | Yes | Nonempty array in your preferred order. |
 | Interest `category` | Yes | Your own prompt or category; there is no fixed taxonomy. |
+| Profile `tags` | No | Overrides all derived tags; use an empty array for no tags. |
 | Interest `answer` | Yes | One answer as a text string. Creates a search tag. |
 | Interest `description` | No | Context, story, or explanation as plain text. |
 | Interest `keywords` | No | Extra searchable tags; useful aliases such as `WoW` or `gaming`. |
@@ -50,7 +51,7 @@ Omit optional text fields rather than leaving empty strings. No nested interests
 
 ## Tags and search
 
-Tags are each interest’s answer followed by its keywords, in interest order. Whitespace is trimmed; case-insensitive duplicates are removed. Category labels and descriptions do not silently become tags. Search ignores case and diacritics and matches partial tags. Space-separated terms must all occur somewhere in the profile’s tags. The directory has one search box; tags themselves are labels, not additional filters. Names and bios are not searched.
+When a profile has a `tags` array, it supplies all displayed and searchable tags. Otherwise, tags are each interest’s answer followed by its keywords, in interest order. Whitespace is trimmed; case-insensitive duplicates are removed. Category labels and descriptions do not silently become tags. Search ignores case and diacritics and matches partial tags. Space-separated terms must all occur somewhere in the profile’s tags. The directory has one search box; tags themselves are labels, not additional filters. Names and bios are not searched.
 
 ## Avatars, privacy, and links
 

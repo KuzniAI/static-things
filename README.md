@@ -28,7 +28,7 @@ Open <http://localhost:8000>. Use an HTTP server rather than opening `index.html
 
 5. Open a pull request with your content and avatar. Maintainers review and merge it; the deployed directory then updates. There is no website editor or login.
 
-The JSON array order controls the directory order, and your interest array order controls your profile. Tags are automatically derived from each interest’s **answer and optional keywords**. No LLM runs. Search matches these tags, case-insensitively; multiple words must all appear across a person’s tags.
+The JSON array order controls the directory order, and your interest array order controls your profile. Set a profile’s `tags` array to choose its displayed and searchable tags. If `tags` is omitted, tags are derived from each interest’s **answer and optional keywords**. An empty array hides all tags. No LLM runs. Search matches these tags, case-insensitively; multiple words must all appear across a person’s tags.
 
 ## Deploy on GitHub Pages
 

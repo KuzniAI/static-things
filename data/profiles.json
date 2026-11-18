@@ -6,6 +6,7 @@
       "name": "Damian",
       "bio": "Programuję w .NETcie już trzecie stulecie",
       "avatar": "assets/avatars/damian.jpg",
+      "tags": ["Claude Code", "Software factories", "Rogale Świętomarcińskie"],
       "interests": [
         {
           "category": "Coding agent i model?",
@@ -20,6 +21,11 @@
           "category": "Czym się zajmuję w pracy?",
           "answer": "Buduję software factory",
           "description": "Klient z Normandii miał wymagania na odpowiednio wysokim poziomie by zbudować system, który śledzi co agent robi i czy w ogóle buduje właściwy projekt."
+        },
+        {
+          "category": "Stopień wysmażenia steka",
+          "answer": "Medium",
+          "description": "Medium rare jest lepsze, ale jeśli nie mam pewności czy kucharz kuma to medium jest bezpieczniejszy."
         }
       ],
       "links": [

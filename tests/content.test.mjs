@@ -34,3 +34,15 @@ test('reject duplicate IDs, malformed fields and executable or credential-bearin
   }
   assert.ok(validateProfiles(null).length);
 });
+
+test('explicit tags override derived tags for display and search', () => {
+  const p = structuredClone(data.profiles[0]);
+  p.tags = [' Custom ', 'custom', 'Other'];
+  assert.deepEqual(tagsFor(p), ['Custom', 'Other']);
+  assert.ok(matches(p, 'custom'));
+  assert.ok(!matches(p, p.interests[0].answer));
+  p.tags = [];
+  assert.deepEqual(tagsFor(p), []);
+  p.tags = [3];
+  assert.ok(validateProfiles({ version: 1, profiles: [p] }).some(error => error.includes('.tags')));
+});
