@@ -9,7 +9,8 @@
       "interests": [
         {
           "category": "Coding agent i model?",
-          "answer": "Claude Code + Claude Opus 5.5"
+          "answer": "Claude Code + Claude Opus 5.5",
+          "description": "To jest czyste lenistwo z mojej strony, bo on już` reaguje na prompty 'Claude, do it' i dostaję lepszy kod niż moi byli podwładni pisali."
         },
         {
           "category": "Ulubiony tani model?",
@@ -17,7 +18,8 @@
         },
         {
           "category": "Czym się zajmuję w pracy?",
-          "answer": "Buduję software factory w oparciu o wymagania dla klientów w Rouen"
+          "answer": "Buduję software factory",
+          "description": "Klient z Normandii miał wymagania na odpowiednio wysokim poziomie by zbudować system, który śledzi co agent robi i czy w ogóle buduje właściwy projekt."
         }
       ],
       "links": [
