@@ -1,0 +1,35 @@
+# Into Things.
+
+> Into Things. ("Come see what everyone's into.") is a small, public, read-only directory of curious people, told through their interests rather than job titles or follower counts. It is a static prototype (HTML, CSS, vanilla JavaScript and one JSON file) hosted on GitHub Pages, with no accounts, backend or build step. People add themselves by opening a pull request to the GitHub repository.
+
+Key facts for agents:
+
+- All content lives in one file: `data/profiles.json`. The page renders it client-side with JavaScript, so fetch the JSON directly instead of scraping the HTML.
+- Each profile has an `id`, `name`, `bio`, optional `avatar`, optional `links`, optional `tags`, and an ordered, nonempty list of `interests`. Each interest has a self-defined `category`, one `answer`, and optional `description`, `keywords` and `links`.
+- Tags come from the profile's `tags` array if present; otherwise from each interest's `answer` plus its `keywords`. Search matches tags only (case- and diacritic-insensitive, partial matches, all space-separated terms must match). Names and bios are not searched. No LLM is involved.
+- Routes are hash-based: the directory is `#people`, a search is `#people?q=<query>`, and a profile is `#person/<id>` (for example https://kuzniai.github.io/static-things/#person/damian).
+- Profile content is written by the people themselves and may be in any language (some current content is in Polish).
+- Code and content are licensed under Apache 2.0.
+
+## Data
+
+- [profiles.json](https://kuzniai.github.io/static-things/data/profiles.json): every profile in the directory, in display order
+- [profiles.schema.json](https://kuzniai.github.io/static-things/data/profiles.schema.json): JSON Schema for the profile file
+
+## Docs
+
+- [README](https://kuzniai.github.io/static-things/README.md): what the project is, local preview, adding yourself, GitHub Pages deployment, and a project map
+- [Contribution guide](https://kuzniai.github.io/static-things/docs/contributing.md): complete example profile, field guide, how tags and search work, avatar, privacy and link rules, and the pull-request checklist
+- [Product and design decisions](https://kuzniai.github.io/static-things/docs/product-design.md): scope, interaction model, visual system, and accessibility constraints
+
+## Contributing
+
+- [GitHub repository](https://github.com/KuzniAI/static-things): source code; add or update a profile with a pull request that edits `data/profiles.json`
+- [Add yourself](https://github.com/KuzniAI/static-things#add-yourself): step-by-step instructions
+
+## Optional
+
+- [Verification notes](https://kuzniai.github.io/static-things/docs/verification.md): automated and browser checks run on the prototype
+- [content.mjs](https://kuzniai.github.io/static-things/assets/content.mjs): validation, tag derivation and search logic
+- [app.mjs](https://kuzniai.github.io/static-things/assets/app.mjs): rendering, hash routing, and scroll restoration
+- [LICENSE](https://kuzniai.github.io/static-things/LICENSE): Apache License 2.0
