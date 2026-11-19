@@ -3,9 +3,9 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { validateProfiles, tagsFor, matches, safeLink, safeAvatar } from '../assets/content.mjs';
 const data = JSON.parse(await readFile(new URL('../data/profiles.json', import.meta.url)));
-test('the directory contains only Damian', () => {
+test('the directory contains Damian and Bartek', () => {
   assert.deepEqual(validateProfiles(data), []);
-  assert.deepEqual(data.profiles.map(p => p.id), ['damian']);
+  assert.deepEqual(data.profiles.map(p => p.id), ['damian', 'bartek']);
   assert.equal(data.profiles[0].name, 'Damian');
 });
 test('search matches multiple terms across interests and keywords', () => {

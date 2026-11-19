@@ -34,6 +34,90 @@
           "url": "https://x.com/lazarewiczd"
         }
       ]
+    },
+    {
+      "id": "bartek",
+      "name": "Bartek",
+      "bio": "Buduję roje agentów, które same uczą się pracować lepiej i taniej. Po godzinach robię gry multiplayer w przeglądarce.",
+      "tags": [
+        "rój agentów",
+        "agenci AI",
+        "Docker",
+        "open source",
+        "robotyka",
+        "druk 3D",
+        "computer vision",
+        "klonowanie głosu",
+        "R",
+        "git",
+        "gamedev",
+        "multiplayer"
+      ],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/keneo" }
+      ],
+      "interests": [
+        {
+          "category": "Projekt, który najbardziej mnie kręci",
+          "answer": "Autonomiczny rój agentów",
+          "description": "Rój agentów samooptymalizujący się, by coraz lepiej i taniej obsługiwać powierzone mu zadania.",
+          "keywords": ["rój agentów", "agenci AI", "multi-agent"]
+        },
+        {
+          "category": "Narzędzie open source, które napisałem",
+          "answer": "docker-dynamic-limits",
+          "description": "Ustawia, mierzy i egzekwuje sumaryczne limity dla kontenerów Docker: czas CPU, RAM, dysk, sieć, I/O i wydatki na API. Kontener może sam sprawdzić, ile mu jeszcze zostało. Powstało na potrzeby roju agentów.",
+          "keywords": ["Docker", "open source", "limity zasobów"],
+          "links": [
+            { "label": "docker-dynamic-limits na GitHubie", "url": "https://github.com/keneo/docker-dynamic-limits" }
+          ]
+        },
+        {
+          "category": "Nad czym teraz dłubię?",
+          "answer": "Robot kroczący (pająk)",
+          "description": "Buduję robota-pająka, który sam chodzi po domu. Wie, gdzie jest, bo łączy kilka metod lokalizacji: Wi-Fi, stacje bazowe, rozpoznawanie obrazu, znaczniki AprilTag i odometrię wizualną. Sama kamera daje 95% dokładności. Gdy coś idzie inaczej, niż zakładał, sam staje i pyta, co dalej, a przy słabej baterii bezpiecznie siada.",
+          "keywords": ["robotyka", "robot kroczący", "lokalizacja", "odometria wizualna", "autonomia"]
+        },
+        {
+          "category": "Z dala od klawiatury",
+          "answer": "Druk 3D",
+          "description": "Projektuję i drukuję własne modele, od drobnych gadżetów po części do robotów. Lubię przejść cały proces sam: od pomysłu i modelu, przez slicing, po gotowy wydruk.",
+          "keywords": ["druk 3D", "projektowanie CAD", "majsterkowanie"]
+        },
+        {
+          "category": "Czego się ostatnio uczę?",
+          "answer": "Rozpoznawanie obrazu",
+          "description": "Eksperymentuję z modelami widzenia komputerowego: zbieram i taguję zdjęcia, udoskonalam modele.",
+          "keywords": ["computer vision", "uczenie maszynowe"]
+        },
+        {
+          "category": "Nad czym ostatnio eksperymentuję?",
+          "answer": "Klonowanie głosu na własnym komputerze",
+          "description": "Z kilkunastu sekund nagrania robię syntezę mowy, która brzmi jak sklonowany głos. Mówi po polsku, po angielsku i w kilkunastu innych językach, także innych niż oryginalne nagranie. Działa w całości lokalnie, bez chmury, i na tyle szybko, że mój asystent AI może wysyłać mi wiadomości głosowe.",
+          "keywords": ["klonowanie głosu", "synteza mowy", "TTS", "lokalne AI"]
+        },
+        {
+          "category": "Język, do którego wracam",
+          "answer": "R",
+          "description": "Do analizy danych, genomiki i szybkich eksperymentów. Ostatnio napisałem bindingi R do wektorowej bazy danych zvec.",
+          "keywords": ["data science", "genomika", "bazy wektorowe"],
+          "links": [
+            { "label": "zvec-r-bindings", "url": "https://github.com/keneo/zvec-r-bindings" }
+          ]
+        },
+        {
+          "category": "Pomysł, który chodzi mi po głowie",
+          "answer": "Warstwy zamiast gałęzi w Gicie",
+          "description": "Projekt badawczy może rozwijać się w wielu kierunkach naraz. Zamiast gałęzi chciałbym warstw, które da się składać jak rozszerzenia (trochę jak w NixOS), żeby inni mogli eksplorować własne warianty.",
+          "keywords": ["kontrola wersji", "git", "NixOS"]
+        },
+        {
+          "category": "Co robię po godzinach?",
+          "answer": "Gry multiplayer w przeglądarce",
+          "description": "Najlepiej takie, w których gracze widzą się nawzajem na żywo, a coś dzieje się od pierwszych sekund. Otchłań Online to wspólne miasto i schodzący bez końca loch na WebSocketach. Były też Snake na LAN dla telefonów w trybie samolotowym, symulator drona FPV i gra w klimacie ZX Spectrum.",
+          "keywords": ["gamedev", "MMO", "multiplayer", "WebSocket", "retro"]
+        }
+      ]
     }
   ]
 }
