@@ -121,7 +121,9 @@ $('retry').addEventListener('click', load);
 async function load() {
   $('loading').hidden = false; $('error').hidden = true;
   try {
-    const response = await fetch(new URL('../data/profiles.json', import.meta.url));
+    const url = new URL('../data/profiles.json', import.meta.url);
+    url.searchParams.set('_', Date.now());
+    const response = await fetch(url, { cache:'no-store' });
     if (!response.ok) throw new Error(`Profile request failed (${response.status})`);
     const data = await response.json(); const errors = validateProfiles(data);
     if (errors.length) throw new Error(errors.join('\n'));
